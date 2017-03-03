@@ -1,0 +1,13 @@
+
+
+# SWITCH ON AND OFF PS4
+- platform: command_line
+  switches:
+    playstation4:
+      command_on: 'ps4-waker'
+      command_off: 'ps4-waker standby'
+      command_state: 'nc -z -w 5 192.168.1.6 9295'
+      value_template: '{{ states.command_line.playstation4 }}'
+      friendly_name: "PS4"
+
+# - platform:

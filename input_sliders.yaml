@@ -1,0 +1,18 @@
+# Define input_slider
+
+fan_brightness:
+  name: Fan Brightness
+  # initial: '{{ light.hue_white_lamp_1.brightness | int }}'
+  initial: 100
+  min: 0
+  max: 100
+  step: 1
+
+lamp_brightness:
+  name: Lamp Brightness
+  # initial: '{{ light.hue_white_lamp_2.attributes.brightness | int }}'
+  initial: 100
+  min: 0
+  max: 100
+  step: 1
+

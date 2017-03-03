@@ -1,0 +1,11 @@
+- name: alloff
+  entities:
+    group.all_lights: off
+    switch.playstation4: off
+    media_player.cast: off
+    media_player.gpmdp: off
+
+-name: bedtime
+  entites:
+    light.room: off
+    shell_command: playstation_netflix_start

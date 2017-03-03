@@ -1,0 +1,12 @@
+
+# Input Selections
+playstation4app:
+  name: App Selection
+  options:
+    - '-- Select an App --'
+    - 'Netflix'
+    - 'Hulu'
+    - 'OverWatch'
+    - 'GTA V'
+  initial: '-- Select an App --'
+  icon: mdi:apps

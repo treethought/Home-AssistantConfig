@@ -1,0 +1,37 @@
+
+# SCRIPTS
+
+flash_lights:
+  alias: flash lights
+  sequence:
+    - alias: turn off lights
+      service: light.turn_off
+      data:
+        entity_id: light.room
+
+    - alias: turn on lights
+      service: light.turn_on
+      data:
+        entity_id: light.room
+        brightness: 100
+
+    - alias: turn off lights
+      service: light.turn_off
+      data:
+        entity_id: light.room
+
+    - alias: turn on lights
+      service: light.turn_on
+      data:
+        entity_id: light.room
+        brightness: 255
+
+
+# match_fan_slider_to_state:
+#   alias: "match fan slider"
+#   sequence:
+#     - service: input_slider.select_value
+#       data_template:
+#         entity_id: input_slider.kitchen_timer
+#         value: 51
+

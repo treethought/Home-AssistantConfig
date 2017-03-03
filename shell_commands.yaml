@@ -1,0 +1,8 @@
+playstation_start: ps4-waker
+playstation_standby: ps4-waker standby
+playstationvue_start: ps4-waker; ps4-waker start CUSA00960"
+playstation_netflix_start: ps4-waker; ps4-waker start CUSA00129;
+playstation_overwatch_start: ps4-waker; ps4-waker start CUSA03974
+playstation_gtav_start: ps4-waker; ps4-waker start CUSA00411
+playstation_hulu_start: ps4-waker; ps4-waker start CUSA00131
+run_orders: orders

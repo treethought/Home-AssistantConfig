@@ -1,0 +1,133 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 35.2565
+  longitude: -120.6214
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 101
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Los_Angeles
+
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Example configuration.yaml entry
+logger:
+  default: error
+  logs:
+    homeassistant.components: info
+    homeassistant.components.http: debug
+    homeassistant.components.shell_command: debug
+    homeassistant.components.switch.command_line: debug
+    # homeassistant.components.rfxtrx: debug
+    # homeassistant.components.device_tracker: critical
+    # homeassistant.components.camera: critical
+
+media_player:
+  - platform: cast
+
+  - platform: gpmdp
+    host: 192.168.1.9
+    name: gmusic
+
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  platform: google
+
+weblink:
+  entities:
+    - name: Router
+      url: http://192.168.1.1/
+    # - name: Home Assistant
+    #   url: https://home-assistant.io
+
+
+### Includes###
+
+automation: !include automation.yaml
+# zone: !include zones.yaml
+sensor: !include sensors.yaml
+switch: !include switches.yaml
+script: !include scripts.yaml
+shell_command: !include shell_commands.yaml
+input_select: !include input_selections.yaml
+input_slider: !include input_sliders.yaml
+group: !include groups.yaml
+
+# device_tracker: !include device_tracker.yaml
+feedreader: !include feeds.yaml
+
+# For google calendar
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+
+
+
+
+# Example configuration.yaml entry showing two styles
+# group:
+#   room:
+#     - light.room
+#     - media_player.cast
+
+# emulated_hue:
+#   type: google_home
+#   # Google Home does not work on different ports.
+#   listen_port: 80
+
+
+light:
+  - platform: hue
+    host: 192.168.1.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

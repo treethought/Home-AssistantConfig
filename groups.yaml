@@ -1,0 +1,49 @@
+# default_view:
+#   view: yes
+#   entities:
+#     # - group.lights
+#     # - group.media
+#     - input_slighter.fan_brightness
+#     # - group.climate
+#     # - sensor
+
+room:
+  name: Room
+  view: yes
+  entities:
+    - light.hue_white_lamp_1
+    - light.hue_white_lamp_2
+
+
+lights:
+  name: Lights
+  icon: mdi:lamp
+  view: yes
+  entities:
+    - input_slighter.fan_brightness
+    - light.room
+    - automation.fan_light__adjust_brightness
+    # - light.hue_white_lamp_1
+    # - light.hue_white_lamp_2
+    # - !include shell_commands.yaml
+
+media:
+  name: media
+  icon: mdi:music
+  view: yes
+  entities:
+    - media_player.cast
+    - media_player.gpmdp
+
+ps4:
+  name: PS4
+  view: yes
+  entities:
+    - input_selection.playstation4app
+    # - shell_command.playstationvue_start
+    # - shell_command.playstation_netflix_start
+    # - shell_command.playstation_overwatch_start
+    # - shell_command.playstation_gtav_start
+    # - shell_command.playstation_hulu_start
+
+
