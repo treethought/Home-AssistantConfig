@@ -1,11 +1,11 @@
-- entity_id: light.hue_white_lamp_1
-  icon: mdi:fan
+entity_id: light.hue_white_lamp_1
+  - icon: mdi:fan
 
-- entity_id: light.hue_white_lamp_2
-  icon: mdi:lamp
+entity_id: light.hue_white_lamp_2
+  - icon: mdi:lamp
 
-- entity_id: light.room
-  icon: mdi:home-variant
+entity_id: light.room
+  - icon: mdi:home-variant
 
-- entity_id: switch.playstation4
-  icon: mdi:playstation
+entity_id: switch.playstation4
+  - icon: mdi:playstation

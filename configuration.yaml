@@ -11,7 +11,18 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Los_Angeles
 
-  customize: !include customize.yaml
+  customize: # !include customize.yaml
+    - entity_id: light.hue_white_lamp_1
+      icon: mdi:fan
+
+    - entity_id: light.hue_white_lamp_2
+      icon: mdi:lamp
+
+    - entity_id: light.room
+      icon: mdi:home-variant
+
+    - entity_id: switch.playstation4
+      icon: mdi:playstation
 
 # Show links to resources in log and frontend
 # introduction:
